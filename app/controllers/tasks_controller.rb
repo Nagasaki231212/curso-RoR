@@ -23,11 +23,15 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.owner = current_user
+    # Ver el contenido de @task
+    puts @task.inspect
     respond_to do |format|
       if @task.save
         format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
         format.json { render :show, status: :created, location: @task }
       else
+        # Ver los errores de validación
+        puts @task.errors.inspect
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end

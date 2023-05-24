@@ -18,13 +18,13 @@ es:
   hello: Hola Mundo
   task:
     errors:
-      invalid_due_date: Fecha Invalida
+      invalid_due_date: La fecha no puede estar en el pasado
   tasks:
     common:
       back: Atras
     form:
       category: Categoria
       description: Descripcion
-      due_date: La fecha no puede estar en el pasado 
+      due_date: Fecha
       name: Nombre
     new_task: Nueva Tarea
